@@ -4,7 +4,7 @@ class Server:
     def check(self):
         return True
 
-daemon = Pyro4.Daemon(host="https://messanger-m8sk.onrender.com")
+daemon = Pyro4.Daemon(host="0.0.0.0")
 uri = daemon.register(Server)
 print("uri=",uri)
 daemon.requestLoop()
